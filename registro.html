@@ -54,5 +54,40 @@
         </div>
       </div>
     
+      <script>
+        // Capturar el formulario y añadir el evento de submit
+        document.getElementById('registroForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del formulario (recargar página)
+
+            // Capturamos los valores de los campos del formulario
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Validamos que la contraseña y la confirmación coincidan
+            if (password !== confirmPassword) {
+                alert('Las contraseñas no coinciden.');
+                return;
+            }
+
+            // Creamos un objeto con los datos para almacenarlo en el localStorage
+            const usuario = {
+                nombre: nombre,
+                email: email,
+                password: password
+            };
+
+            // Guardamos los datos en localStorage
+            localStorage.setItem('usuario', JSON.stringify(usuario));
+
+            // Informamos al usuario que se ha guardado correctamente
+            alert('Registro exitoso!');
+
+            // Aquí podrías redirigir a otra página, por ejemplo, a la página de inicio de sesión
+            // window.location.href = "login.html";
+        });
+    </script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

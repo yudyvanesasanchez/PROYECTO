@@ -33,7 +33,7 @@ function renderProductos() {
 // Manejar eventos de productos (Agregar al carrito)
 productosContainer.addEventListener("click", e => {
     if (e.target.tagName === "BUTTON") {
-        const productoId = paraseInt(e.target.dataset.id);
+        const productoId = parseInt(e.target.dataset.id);
         const quantityInput = document.querySelector(`.producto-quantity[data-id="${productoId}"]`);
         const cantidad = parseInt(quantityInput.value);
         agregarAlCarrito(productoId, cantidad);
@@ -61,7 +61,7 @@ function actualizarCarrito() {
             <p>${producto.nombre} - $${producto.precio} x ${producto.cantidad}</p>
             <div>
                 <button onclick="cambiarCantidad(${producto.id}, -1)" class="btn btn-sm btn-secondary">-</button>
-                <span>${producto.cantiadad}</span>
+                <span>${producto.cantidad}</span>
                 <button onclick="cambiarCantidad(${producto.id}, 1)" class="btn btn-sm btn-secondary">+</button>
                 <button onclick="eliminarDelCarrito(${producto.id})" class="btn btn-sm btn-danger">Eliminar</button>
             </div>

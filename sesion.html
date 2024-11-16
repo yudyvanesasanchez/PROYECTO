@@ -42,5 +42,26 @@
         </div>
       </div>
     
+
+      <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Evita el envío del formulario
+    
+          // Obtener los valores de los campos
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+    
+          // Guardar en localStorage
+          localStorage.setItem('userEmail', email);
+          localStorage.setItem('userPassword', password);
+    
+          // Mensaje de confirmación (opcional)
+          alert('Datos guardados en localStorage');
+    
+          // Opcional: Redirigir a otra página después del guardado
+          // window.location.href = 'dashboard.html'; // Cambia la URL de destino si es necesario
+        });
+      </script>
+      <script src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
