@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 col-lg-4">
+            <div class="card shadow-sm">
+              <div class="card-header text-center">
+                <h3>Registro</h3>
+              </div>
+              <div class="card-body">
+                <form action="#" method="POST">
+                  <!-- Nombre de Usuario -->
+                  <div class="mb-3">
+                    <label for="username" class="form-label">Nombre de Usuario</label>
+                    <input type="text" class="form-control" id="username" name="username" required>
+                  </div>
+    
+                  <!-- Correo Electrónico -->
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+    
+                  <!-- Contraseña -->
+                  <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                  </div>
+    
+                  <!-- Confirmar Contraseña -->
+                  <div class="mb-3">
+                    <label for="confirm_password" class="form-label">Confirmar Contraseña</label>
+                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+                  </div>
+    
+                  <!-- Botón de Registro -->
+                  <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer text-center">
+                <small>¿Ya tienes cuenta? <a href="#">Iniciar sesión</a></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
